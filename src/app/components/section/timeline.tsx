@@ -1,93 +1,42 @@
-import * as React from "react";
-import Timeline from "@mui/lab/Timeline";
-import TimelineItem from "@mui/lab/TimelineItem";
-import TimelineSeparator from "@mui/lab/TimelineSeparator";
-import TimelineConnector from "@mui/lab/TimelineConnector";
-import TimelineContent from "@mui/lab/TimelineContent";
-import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
-import TimelineDot from "@mui/lab/TimelineDot";
-import ssn from "../../assests/ssn.png";
-import sms from "../../assests/sms.png";
-import google from "../../assests/google.png";
-import gallabox from "../../assests/gallabox.png";
+"use client";
+import { timelineData } from "@/app/data/timelineData";
+import { AsyncImage } from "loadable-image";
 import Image from "next/image";
-import Samsung from "../../assests/samsung.png";
-
+import { Blur } from "transitions-kit";
 
 export default function TimelineSection() {
   return (
     <div className="pl-50 pb-50">
-      <div className="intro pt-50 ">
+      <div className="intro pt-10">
+        <Image
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTEuNTEgMzAuODQiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDpub25lO3N0cm9rZTojZWI4YTQ0O3N0cm9rZS1taXRlcmxpbWl0OjEwO3N0cm9rZS13aWR0aDo3cHg7fTwvc3R5bGU+PC9kZWZzPjxnIGlkPSJMYXllcl8yIiBkYXRhLW5hbWU9IkxheWVyIDIiPjxnIGlkPSJMYXllcl8xLTIiIGRhdGEtbmFtZT0iTGF5ZXIgMSI+PHBvbHlsaW5lIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSIyLjY3IDUuNDIgMTkuNTkgMjUuNDIgMzYuNTIgNS40MiA1My40NCAyNS40MiA3MC4zNiA1LjQyIDg3LjI4IDI1LjQyIDEwNC4yMSA1LjQyIDEyMS4xMyAyNS40MiAxMzguMDUgNS40MiAxNTQuOTggMjUuNDIgMTcxLjkxIDUuNDIgMTg4Ljg0IDI1LjQyIi8+PC9nPjwvZz48L3N2Zz4="
+          alt="icon"
+          width={128}
+          height={128}
+        />
         <p>Timeline</p>
       </div>
       <div className="timeline pt-20">
-        <div className="timeline-item">
-          <div className="timeline-line"></div>
-          <div className="timeline-circle">
-            <div className="timeline-circle-item " />
-            <p className="timeline-year">April 2019</p>
-            <div className="timeline-info-item">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled
+        {timelineData.map((data, index) => (
+          <div className="timeline-item" key={index}>
+            <div className="timeline-line"></div>
+            <div className="timeline-circle">
+              <div className="timeline-circle-item " />
+              <p className="timeline-year">{data.date}</p>
+              <div className="timeline-info-item flex flex-col gap-3">
+                <AsyncImage
+                  src={data.img_url}
+                  alt=""
+                  className=""
+                  style={{ height: data.img_height, width: data.img_width }}
+                  Transition={Blur}
+                />
+                <p className="line-clamp-4">{data.content}</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="timeline-item">
-          <div className="timeline-line"></div>
-          <div className="timeline-circle ml-3 mr-3">
-            <div className="timeline-circle-item " />
-            <p className="timeline-year">April 2019</p>
-            <div className="timeline-info-item">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled
-            </div>
-          </div>
-        </div>
-        <div className="timeline-item">
-          <div className="timeline-line"></div>
-          <div className="timeline-circle ml-3 mr-3">
-            <div className="timeline-circle-item " />
-            <p className="timeline-year">April 2019</p>
-            <div className="timeline-info-item">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled
-            </div>
-          </div>
-        </div>
-        <div className="timeline-item">
-          <div className="timeline-line"></div>
-          <div className="timeline-circle ml-3 mr-3">
-            <div className="timeline-circle-item " />
-            <p className="timeline-year">April 2019</p>
-            <div className="timeline-info-item">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled
-            </div>
-          </div>
-        </div>
-        <div className="timeline-item">
-          <div className="timeline-line"></div>
-          <div className="timeline-circle ml-3 mr-3">
-            <div className="timeline-circle-item " />
-            <p className="timeline-year">April 2019</p>
-            <div className="timeline-info-item">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
 }
-

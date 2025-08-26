@@ -1,7 +1,7 @@
-import c_plus_plus from "../../assests/c_plus_plus.png";
+import c_plus_plus from "../../assets/c_plus_plus.png";
 import Image from "next/image";
 import { IoLogoJavascript, IoLogoVercel } from "react-icons/io5";
-import { SiTypescript, SiChakraui } from "react-icons/si";
+import { SiTypescript, SiChakraui, SiRabbitmq } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 import {
   FaDartLang,
@@ -15,16 +15,22 @@ import {
   FaGitAlt,
 } from "react-icons/fa6";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { DiMongodb, DiMysql } from "react-icons/di";
+import { DiMongodb, DiRedis } from "react-icons/di";
 import { TbFileTypeSql } from "react-icons/tb";
 
 export default function SkillSection() {
   return (
-    <div className="skill-main pl-50 pb-50">
+    <div className="skill-main pl-50 pt-50 pb-50">
       <div className="intro pt-100 ">
+        <Image
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTEuNTEgMzAuODQiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDpub25lO3N0cm9rZTojZWI4YTQ0O3N0cm9rZS1taXRlcmxpbWl0OjEwO3N0cm9rZS13aWR0aDo3cHg7fTwvc3R5bGU+PC9kZWZzPjxnIGlkPSJMYXllcl8yIiBkYXRhLW5hbWU9IkxheWVyIDIiPjxnIGlkPSJMYXllcl8xLTIiIGRhdGEtbmFtZT0iTGF5ZXIgMSI+PHBvbHlsaW5lIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSIyLjY3IDUuNDIgMTkuNTkgMjUuNDIgMzYuNTIgNS40MiA1My40NCAyNS40MiA3MC4zNiA1LjQyIDg3LjI4IDI1LjQyIDEwNC4yMSA1LjQyIDEyMS4xMyAyNS40MiAxMzguMDUgNS40MiAxNTQuOTggMjUuNDIgMTcxLjkxIDUuNDIgMTg4Ljg0IDI1LjQyIi8+PC9nPjwvZz48L3N2Zz4="
+          alt="icon"
+          width={128}
+          height={128}
+        />
         <p>My Stack</p>
       </div>
-      <div className="skill-grp mt-20">
+      <div className="skill-grp mt-20 ml-30">
         <div className="skill-item p-10">
           <p className="skill-sub-heading">Technologies</p>
           <div className="skill-item-list pl-5">
@@ -102,6 +108,10 @@ export default function SkillSection() {
             <p className="pl-2">Sql</p>
           </div>
           <div className="skill-item-list pl-5">
+            <DiRedis className="text-black" />
+            <p className="pl-2">Redis</p>
+          </div>
+          <div className="skill-item-list pl-5">
             <FaGitAlt className="text-black" />
             <p className="pl-2">Git</p>
           </div>
@@ -112,6 +122,10 @@ export default function SkillSection() {
           <div className="skill-item-list pl-5">
             <TbApi className="text-black" />
             <p className="pl-2">REST</p>
+          </div>
+          <div className="skill-item-list pl-5">
+            <SiRabbitmq className="text-black" />
+            <p className="pl-2">Rabbitmq</p>
           </div>
         </div>
       </div>
