@@ -9,8 +9,23 @@ import nevernote from "../assets/nevernote.png";
 import xpense from "../assets/xpense.png";
 import xpense_1 from "../assets/xpense_1.png";
 import xpense_2 from "../assets/xpense_2.png";
+import widgetPreview from "../assets/widget-preview.png";
 
 export const projectsData = [
+  {
+    img_data: [
+      {
+        img_url: widgetPreview.src,
+        img_height: 260,
+        img_width: 580,
+      },
+    ],
+    title: "Cricinfo Widget",
+    desp: "Built a live match widget UI for desktop with scoreboard, match selector, and top performers in a compact glanceable panel.",
+    stack: ["React", "TypeScript", "WidgetKit", "TailWind-Css", "UX"],
+    git_link: "",
+    project_link: "",
+  },
   {
     img_data: [
       {

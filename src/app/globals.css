@@ -25,6 +25,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .intro-main{
   display: flex;
   flex-direction: column;
@@ -358,8 +362,12 @@ body {
 }
 
 .blog-page-shell {
-  margin-left: 8rem;
-  margin-right: 8rem;
+  width: min(100%, 1100px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 112px;
+  padding-right: 112px;
+  box-sizing: border-box;
 }
 
 .project-media-row,
@@ -367,11 +375,40 @@ body {
   max-width: 100%;
 }
 
+.project-media-row {
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+.project-media {
+  border-radius: 14px;
+  border: 1px solid rgba(20, 22, 26, 0.08);
+  box-shadow: 0 8px 18px rgba(20, 22, 26, 0.08);
+  object-fit: cover;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.project-media:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(20, 22, 26, 0.11);
+  filter: saturate(1.03);
+}
+
 .blog-cover {
   width: min(416px, 100%) !important;
   height: auto !important;
   aspect-ratio: 416 / 220;
   object-fit: cover;
+  border-radius: 0;
+  border: 1px solid rgba(20, 22, 26, 0.08);
+  box-shadow: 0 8px 20px rgba(20, 22, 26, 0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.blogs-card:hover .blog-cover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(20, 22, 26, 0.1);
 }
 
 .blog-detail-cover {
@@ -379,6 +416,17 @@ body {
   height: auto !important;
   aspect-ratio: 5 / 3;
   object-fit: cover;
+  border-radius: 0;
+  border: 1px solid rgba(20, 22, 26, 0.08);
+  box-shadow: 0 14px 30px rgba(20, 22, 26, 0.12);
+}
+
+.timeline-media {
+  border-radius: 12px;
+  border: 1px solid rgba(20, 22, 26, 0.09);
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 6px 16px rgba(20, 22, 26, 0.08);
+  padding: 4px;
 }
 
 @media (max-width: 1024px) {
@@ -469,6 +517,10 @@ body {
     height: auto !important;
   }
 
+  .blog-detail-cover {
+    box-shadow: 0 10px 22px rgba(20, 22, 26, 0.1);
+  }
+
   .blog-grid {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -483,8 +535,9 @@ body {
   }
 
   .blog-page-shell {
-    margin-left: 4rem;
-    margin-right: 4rem;
+    width: min(100%, 860px);
+    padding-left: 72px;
+    padding-right: 72px;
   }
 }
 
@@ -618,8 +671,9 @@ body {
   }
 
   .blog-page-shell {
-    margin-left: 20px;
-    margin-right: 20px;
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
   .blog-page-shell .text-5xl {
