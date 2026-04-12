@@ -10,13 +10,13 @@ export default function IntroSection() {
   return (
     <div className="intro-main">
       <NavSection />
-      <div className="intro pl-50 pt-30">
+      <div className="intro pl-50 pt-30 intro-content">
         <p className="intro-plain">Hello! 👋🏼</p>
         <p>I'm Manoj R.</p>
         <p>A design-minded developer.</p>
         <p className="intro-plain pt-5"> Strike. Scream. Run.</p>
       </div>
-      <div className="contact pt-20 pl-50">
+      <div className="contact pt-20 pl-50 intro-contact">
         <FaGithub className="text-black contact-items w-32 h-32" />
         <FaLinkedin className="text-black contact-items w-32 h-32" />
         <FaWhatsapp className="text-black contact-items w-32 h-32" />

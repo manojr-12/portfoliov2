@@ -12,7 +12,7 @@ export default function Blog({ params }: { params: Promise<{ id: number }> }) {
   const { id } = use(params);
   const blog = blogs[id];
   return (
-    <div className="ml-130 mr-130 mt-30 flex flex-col justify-center items-start gap-10 mb-30">
+    <div className="blog-page-shell mt-30 flex flex-col justify-center items-start gap-10 mb-30">
       <Toaster />
       <div className="blog-content text-5xl text-black font-extrabold text-left">
         <p>{blog.title}</p>
@@ -24,6 +24,7 @@ export default function Blog({ params }: { params: Promise<{ id: number }> }) {
       <div className="w-full flex justify-center">
         <AsyncImage
           src={blog.img_url}
+          className="blog-detail-cover"
           style={{ width: 1000, height: 600 }}
           Transition={Blur}
         />
