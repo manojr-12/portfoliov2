@@ -8,7 +8,7 @@ import NavSection from "./nav";
 
 export default function IntroSection() {
   return (
-    <div className="intro-main" id="about">
+    <div className="intro-main">
       <NavSection />
       <div className="intro pl-50 pt-30 intro-content">
         <p className="intro-plain">Hello! 👋🏼</p>

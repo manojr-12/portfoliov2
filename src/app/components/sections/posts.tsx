@@ -1,5 +1,5 @@
 "use client";
-import { blogs } from "@/app/data/postsData";
+import { blogs } from "@/app/content/posts";
 import { AsyncImage } from "loadable-image";
 import Image from "next/image";
 import Link from "next/link";

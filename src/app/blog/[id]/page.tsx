@@ -1,6 +1,6 @@
 "use client";
-import { blogs } from "@/app/data/postsData";
-import { BASE_URL } from "@/app/constants";
+import { blogs } from "@/app/content/posts";
+import { BASE_URL } from "@/app/lib/constants";
 import copy from "copy-to-clipboard";
 import { AsyncImage } from "loadable-image";
 import { use } from "react";

@@ -8,7 +8,7 @@ import nevernote from "../../assets/nevernote.png";
 import xpense from "../../assets/xpense.png";
 import xpense_1 from "../../assets/xpense_1.png";
 import xpense_2 from "../../assets/xpense_2.png";
-import { projectsData } from "@/app/data/projectsData";
+import { projectsData } from "@/app/content/projects";
 import { AsyncImage } from "loadable-image";
 import { Blur } from "transitions-kit";
 

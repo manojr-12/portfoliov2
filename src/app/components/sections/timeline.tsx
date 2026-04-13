@@ -1,5 +1,5 @@
 "use client";
-import { timelineData } from "@/app/data/timelineData";
+import { timelineData } from "@/app/content/timeline";
 import { AsyncImage } from "loadable-image";
 import Image from "next/image";
 import { Blur } from "transitions-kit";
